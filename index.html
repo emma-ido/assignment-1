@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ashesi CV Form</title>
+        <link rel="stylesheet" href="C:\Users\'Emma-Ido\CV_Assignment\formStyle.css">
+        <script src="formCRUD.js"></script>
+        <style>h2 {text-align: center;}</style>
+    </head>
+    <body>
+        <h2>Please fill in the details to generate a CV</h2>
+        <div class="form" id="con">
+            <div class="row">
+                <div class="col-25">
+                  <label for="fname">Full Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Enter your full name">
+                </div>
+            </div>
+            <div id="gender" class="row">
+              <div class="col-25">
+                  <label for="gender">Gender</label>
+              </div>
+              <div class="col-10">
+                  <select id="gen" name="gender">
+                      <option value="M">Male</option>
+                      <option value="F">Female</option>
+                  </select>
+              </div>
+          </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="add">Address</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="add" name="address" placeholder="Enter your address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="phonenum">Phone Number</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="phonenum" name="phonenumber" placeholder="Enter your Phone Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="email" name="emailaddress" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="obj">Objective</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="obj" name="objective" placeholder="Enter your objective">
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-25">
+                  <label for="edu">Education</label>
+                </div>
+                <div class="col-25">
+                    <input type="text" id="edu" name="education" placeholder="Enter higher institution">
+                </div>
+                <div class="col-25">
+                  <input type="text" id="maj" name="major" placeholder="Major">
+                </div>
+                <div class="col-25">
+                  <input type="text" id="loc" name="location" placeholder="Enter Location">
+                </div>
+                <div class="col-25">
+                  <input type="text" id="year" name="years" placeholder="month year - month year">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="courses">Relevant Courses</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="courses" name="courses" placeholder="Enter relevant courses seperated by commas">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="ach">Achievements</label>
+                </div>
+                <div class="col-75">
+                  <textarea placeholder="Enter your Achievements" id="ach" name="achievements" class="workex"></textarea>
+                  <!-- <input type="text" id="ach" name="achievements" placeholder="Enter your achievements"> -->
+                </div>
+            </div>
+            <div id="wkx1">
+            <div id="wkx" class="wkxrow">
+                <div class="col-25">
+                  <label for="workex">Work Experience</label>
+                </div>
+                <div class="col-35">
+                    <textarea placeholder="Enter work experience" id="workex" name="workexperience1" class="workex"></textarea>
+                </div>
+                <div class="col-25">
+                    <input type="text" id="workloc1" name="workloc1" placeholder="Location">
+                </div>
+                <div id = "1" class="col-25" name="Blah">
+                  <input type="text" id="workyr1" name="workyr1" placeholder="month year - month year">
+                </div>
+            </div>
+            </div>
+            <div id="buttonCon" class="row">
+                <button type="button" onclick="addFields()">Add Work Experience Field</button>
+            </div>
+            <div id="key" class="row">
+                <div class="col-25">
+                  <label for="oth">Other Skills</label>
+                </div>
+                <div class="col-75">
+                  <textarea placeholder="Enter Skills" id="oth" name="otherskills" class="workex"></textarea>
+                  <!-- <input type="text" id="oth" name="otherskills" placeholder="Enter other skills"> -->
+                </div>
+            </div>
+            <div id="key" class="row">
+                <div class="col-25">
+                  <label for="cocurr">Co-curricular</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="cocurr" name="cocurricular" placeholder="Enter co-curricular activities">
+                </div>
+            </div>
+            <div id="key" class="row">
+                <div class="col-25">
+                  <label for="ref">References</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="ref" name="references" placeholder="Enter References">
+                </div>
+            </div>
+            <br>
+            <div>
+              <!-- <form action="cv.html"> -->
+                <button type="submit" onclick="processForm()" value="">Submit</button>
+              <!-- </form> -->
+            </div>
+          </div>
+    </body>
+</html>

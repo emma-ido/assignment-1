@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your submited CV</title>
+        <link rel="stylesheet" href="formStyle.css">
+        <script src="formCRUD.js"></script>
+    </head>
+    <body>
+        <div id="header" class="header"></div>
+        <div id="add" class="smallheader"></div>
+        <div id="phonenum" class="smallheader"></div>
+        <div id="email" class="smallheader"></div>
+
+        <br>
+        <p><strong>OBJECTIVE</strong></p>
+        <hr style="border: 1px solid black;" />
+        <div id="obj" class="smallheader-2"></div>
+        
+        <br>
+        <p><strong>EDUCATION</strong></p>
+        <hr style="border: 1px solid black;" />
+
+        <!-- <div class="container"> -->
+            <div class="edu-left">
+                <strong><p id="institution" class ="left"></p></strong>
+                <p id="major" class="left"></p>
+            </div>
+
+            <div class="edu-right">
+                <strong><div id="eduLocation" class="right"></div></strong>
+                <div id="eduYr" class="right"></div>
+            </div>
+        <!-- </div> -->
+        
+        <br><br><br>
+        <div class="row">
+            <ul>
+                <li><label for="courses">Relevant Courses: </label>
+                    <div id="courses" class="right"></div></li>
+            </ul>
+        </div>
+
+        <br>
+        <p><strong>ACHIEVEMENTS/AWARDS</strong></p>
+        <hr style="border: 1px solid black;" />
+        <div id="achievements" class="smallheader-2"></div>
+
+        <br>
+        <p><strong>WORK EXPERIENCE</strong></p>
+        <hr style="border: 1px solid black;" />
+
+        <br>
+        <p><strong>OTHER SKILLS</strong></p>
+        <hr style="border: 1px solid black;" />
+        <div id="otherSkills" class="smallheader-2"></div>
+
+        <br>
+        <p><strong>CO-CURRICULAR ACTIVITIES</strong></p>
+        <hr style="border: 1px solid black;" />
+        <div id="cocurr" class="smallheader-2"></div>
+
+        <br>
+        <p><strong>REFERENCES</strong></p>
+        <hr style="border: 1px solid black;" />
+        <div id="references" class="smallheader-2"></div>
+
+        <script>loadData();</script>
+    </body>
+</html>
