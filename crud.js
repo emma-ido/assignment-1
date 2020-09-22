@@ -8,8 +8,23 @@ function processForm() {
     /*Storing data from cv forms into variables*/
     var gender = document.getElementById("gen").value;
     var phoneNumber = document.getElementById("phonenum").value;
+    
+    function validateNumber(number) {
+        var reg = new RegExp('^[0-9]+$');
+        return reg.test(number);
+    }
+    var numberBool = validateNumber(phoneNumber);
+    if(!numberBool) {window.alert("invalid phone number"); return;}
+    
+
     var email = document.getElementById("email").value;
-    console.log(email);
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    var emailBool = validateEmail(email);
+    if(!emailBool) {window.alert("invalid email"); return;}
+
     var address = document.getElementById("add").value;
     var objective = document.getElementById("obj").value;
     console.log(objective);
@@ -51,6 +66,7 @@ function processForm() {
     localStorage.setItem("workExperience", workExperience);
     localStorage.setItem("workLocation", workLocation);
     localStorage.setItem("workYear", workYear);
+    window.open("cv.html");
 }
 
 
