@@ -40,68 +40,19 @@ function processForm() {
     localStorage.setItem("otherSkills", othSkills);
     localStorage.setItem("cocurr", cocurr);
     localStorage.setItem("references", references);
+
+
+    /* Saving the data from work experience fields */
+    var i = document.getElementById("wkx1").lastElementChild.lastElementChild.getAttribute("id");
+    var workExperience = document.getElementById("workex1").value;
+    console.log(workExperience);
+    var workLocation = document.getElementById("workloc1").value;
+    var workYear = document.getElementById("workyr1").value;
+    localStorage.setItem("workExperience", workExperience);
+    localStorage.setItem("workLocation", workLocation);
+    localStorage.setItem("workYear", workYear);
 }
 
-
-/*Function to add new work experience field in form*/
-function addFields() {
-    var container = document.getElementById("con");
-    var button = document.getElementById("buttonCon");
-    var otherSkills = document.getElementById("key");
-    //container.removeChild(button);
-
-    /*Creating divs to place the new label, text area and input box*/
-    var div = document.createElement("div");
-    div.classList.add("row");
-    var div1 = document.createElement("div");
-    div1.classList.add("col-35");
-    var div2 = document.createElement("div");
-    div2.classList.add("col-25");
-    var div3 = document.createElement("div");
-    div3.classList.add("col-25");
-    var div4 = document.createElement("div");
-    div4.classList.add("col-25");
-
-    /*Creating the text area, label and input field*/
-    var textarea = document.createElement("textarea");
-    //var otherTextarea = document.getElementsByName("workexperience1");
-    var label = document.createElement("label");
-    var yearInput = document.createElement("input");
-    var locationInput = document.createElement("input");
-    yearInput.type = locationInput.type = "text";
-    var newName = document.getElementById("wkx1").lastElementChild.lastElementChild.getAttribute("id"); 
-    console.log(newName);
-    console.log(typeof(newName));
-    var Num = parseInt(newName) + 1;
-    console.log(Num);
-    document.getElementById("wkx1").lastElementChild.lastElementChild.id = toString(Num);
-    var initialName = "workyr";
-    yearInput.name = initialName.concat(Num);
-    console.log(yearInput.name);
-    locationInput.name = "workloc".concat(Num);
-    locationInput.placeholder = "Location";
-    yearInput.placeholder = "month year - month year";
-    textarea.placeholder = "Intern at Google\n*Achievement-1\n*Achievement-2";
-    textarea.id = "workex".concat(Num);
-    textarea.classList.add("workex");
-    label.innerText = "Work Experience";
-
-    /*Appending the new elements to the existing div*/
-    div1.appendChild(textarea);
-    div2.appendChild(yearInput);
-    div3.appendChild(label);
-    div4.appendChild(locationInput);
-    div.appendChild(div3);
-    div.appendChild(div1);
-    div.appendChild(div4);
-    div.appendChild(div2);
-    
-    //container.insertBefore(div, otherSkills);
-    document.getElementById("wkx1").append(div);
-    //document.getElementById("wkx1").append(button);
-    //container.insertBefore(button, otherSkills);
-    //container.insertBefore(document.createElement("br"), otherSkills);
-}
 
 /*Function to retrieve form details from local storage*/
 function loadData() {
@@ -125,7 +76,10 @@ function loadData() {
     var eduYr = localStorage.getItem("eduYr");
     document.getElementById("eduYr").innerHTML = eduYr;
     var courses = localStorage.getItem("courses");
-    document.getElementById("courses").innerHtml = courses;
+    window.onload = function(){
+        document.getElementById("courses").innerHTML=courses;
+    }
+    // document.getElementById("courses").innerHtml = courses;
     console.log("Relevant Courses: " + courses);
     var achievements = localStorage.getItem("achievements");
     document.getElementById("achievements").innerHTML = achievements;
@@ -135,4 +89,13 @@ function loadData() {
     document.getElementById("cocurr").innerHTML = cocurr;
     var references = localStorage.getItem("references");
     document.getElementById("references").innerHTML = references;
+
+    /* Loading the data from work experience fields */
+    var workExperience = localStorage.getItem("workExperience");
+    document.getElementById("workex").innerHTML = workExperience;
+    var workYear = localStorage.getItem("workYear");
+    document.getElementById("workyr").innerHTML = workYear;
+    var workLocation = localStorage.getItem("workLocation");
+    document.getElementById("workloc").innerHTML = workLocation;
+    
 }

@@ -82,7 +82,7 @@ p.right {
    width: 50%;
 }
 
-p.left {
+.left {
    line-height: 1.0;
    font-size: small;
    text-align: left;
@@ -120,6 +120,28 @@ p.left {
    width: 70%;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
+ 
+ .edu-left-2 {
+    /* display: inline; */
+    float: left;
+    width: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    /* text-indent: 3%; */
+  }
+
+  blockquote.left {
+    line-height: 1.0;
+    font-size: 17px;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 50px 0px 55px;
+    width: 25%;
+ }
+
+ .go{
+     width: 50%;
+ }
 
  .edu-right {
   float: right;
@@ -127,6 +149,7 @@ p.left {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: smaller;
+  /* white-space: pre-wrap; */
 }
 
  li {
